@@ -17,8 +17,6 @@ import java.util.Arrays;
 
 public class DateAttributeMapper extends AbstractJsonUserAttributeMapper {
 
-    private static final Set<IdentityProviderSyncMode> IDENTITY_PROVIDER_SYNC_MODES = new HashSet<>(Arrays.asList(IdentityProviderSyncMode.values()));
-
     protected static final Logger logger = Logger.getLogger(DateAttributeMapper.class);
 
     /**
@@ -75,11 +73,6 @@ public class DateAttributeMapper extends AbstractJsonUserAttributeMapper {
     @Override
     public String getId() {
         return PROVIDER_ID;
-    }
-
-    @Override
-    public boolean supportsSyncMode(IdentityProviderSyncMode syncMode) {
-        return IDENTITY_PROVIDER_SYNC_MODES.contains(syncMode);
     }
 
     @Override
